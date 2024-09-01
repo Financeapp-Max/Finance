@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Gastos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Gestor de Gastos</h1>
+        <form id="expense-form">
+            <label for="income">¿Cuánto ganas mensualmente?</label>
+            <input type="number" id="income" name="income" required>
+
+            <label for="credit-expenses">¿Cuáles son tus gastos en créditos?</label>
+            <input type="number" id="credit-expenses" name="credit-expenses" required>
+
+            <label for="restaurant-expenses">¿Cuáles son tus gastos en restaurantes?</label>
+            <input type="number" id="restaurant-expenses" name="restaurant-expenses" required>
+
+            <label for="house-expenses">¿Cuáles son tus gastos en casa?</label>
+            <input type="number" id="house-expenses" name="house-expenses" required>
+
+            <label for="transport-expenses">¿Cuáles son tus gastos en transporte?</label>
+            <input type="number" id="transport-expenses" name="transport-expenses" required>
+
+            <button type="submit">Generar Reporte</button>
+        </form>
+
+        <div id="result" style="display: none;">
+            <canvas id="expense-chart"></canvas>
+            <div id="summary">
+                <h2>Resumen</h2>
+                <p id="total-expenses">Total Gastos: $0</p>
+                <p id="remaining-budget">Dinero Restante: $0</p>
+            </div>
+        </div>
+
+        <button class="menu-button back-button" onclick="window.location.href='index.html'">← Volver</button>
+    </div>
+    <script src="gestor_gastos.js"></script>
+</body>
+</html>
+
+

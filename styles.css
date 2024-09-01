@@ -1,0 +1,536 @@
+/* Estilos generales */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-image: url('fondo.jpg'); /* Cambia 'fondo.jpg' al nombre de tu imagen */
+  background-size: cover; /* Asegura que la imagen cubra toda el área */
+  background-position: center; /* Centra la imagen de fondo */
+  background-attachment: fixed; /* Fija la imagen de fondo al scroll */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  overflow-y: auto; /* Asegura el scroll vertical */
+}
+
+/* Contenedor principal para el contenido */
+.menu-container, .recomendaciones-container, .informacion-container, .gestor-gastos-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 8px; /* Opcional: Para bordes redondeados */
+}
+
+/* Estilo del encabezado */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+h2 {
+  font-size: 20px;
+  color: #333;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
+}
+
+/* Estilos de los botones */
+.menu-button {
+  padding: 12px 20px;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+.back-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.next-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.menu-button:hover {
+  opacity: 0.8;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 600px) {
+  .menu-container, .recomendaciones-container, .informacion-container, .gestor-gastos-container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .menu-button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+/* Estilos generales */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor del menú */
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  max-width: 500px; /* Limita el ancho máximo del menú */
+  background-color: #f5f5f5;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Estilo del logo */
+.app-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Estilo de los botones del menú */
+.menu-button {
+  padding: 12px 20px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+/* Botón para recomendaciones (azul) */
+.menu-button.recommendations-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.menu-button.recommendations-button:hover {
+  background-color: #0056b3;
+}
+
+/* Botón para recordatorio (rojo) */
+.menu-button.recordatorio-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.menu-button.recordatorio-button:hover {
+  background-color: #c82333;
+}
+
+/* Botón para gestor de gastos (verde) */
+.menu-button.gestor-gastos-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.menu-button.gestor-gastos-button:hover {
+  background-color: #218838;
+}
+
+/* Botón de volver (gris) */
+.menu-button.back-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.menu-button.back-button:hover {
+  background-color: #5a6268;
+}
+
+/* Botón de siguiente (azul) */
+.menu-button.next-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.menu-button.next-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo de los encabezados */
+h1, h2 {
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* Estilo de las imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Estilo de listas */
+ul {
+  list-style-type: disc;
+  margin: 20px 0;
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+/* Media queries para ajustar el diseño en pantallas pequeñas */
+@media (max-width: 600px) {
+  .app-logo {
+    width: 100px;
+  }
+
+  .menu-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+/* Estilos generales */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  overflow-y: auto; /* Permite el desplazamiento vertical */
+}
+
+/* Contenedor principal para el contenido */
+.recomendaciones-container, .informacion-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  min-height: 100vh; /* Asegura que el contenedor se extienda al menos a la altura de la vista */
+}
+
+/* Estilo del encabezado */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+h2 {
+  font-size: 20px;
+  color: #333;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
+}
+
+/* Estilos de los botones */
+.menu-button {
+  padding: 12px 20px;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+.back-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.next-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.menu-button:hover {
+  opacity: 0.8;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 600px) {
+  .recomendaciones-container, .informacion-container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .menu-button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+#app {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+#new-reminder {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li button {
+    background-color: #dc3545;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+ul li button:hover {
+    background-color: #c82333;
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilo del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label, input {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo del resultado */
+#result {
+    margin-top: 20px;
+}
+
+#expense-chart {
+    max-width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+#summary {
+    margin-top: 20px;
+}
+
+.menu-button.back-button {
+    background-color: #6c757d;
+    color: white;
+    margin-top: 20px;
+}
+
+.menu-button.back-button:hover {
+    background-color: #5a6268;
+}
